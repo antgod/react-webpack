@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --progress --colors --content-base public"
+    "start": "webpack-dev-server --progress --colors --content-base public"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +31,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-json-editor": "^0.2.0"
   }
 }
