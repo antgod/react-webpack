@@ -1,12 +1,20 @@
 'use strict';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './container/App';
-import RenderType from './container/RenderType';
+import Constant from './common/Constant'
+import App from './components/App';
+import RenderByType from './components/RenderByType';
+import Context from './components/Context';
+import Control from './components/Control';
+import {  HighOrderComponent } from './components/Hoc';
+import './index.less'
+
 let root = document.getElementById('app');
 
-debugger
-ReactDOM.render( <div>
-  <RenderType/>
+ReactDOM.render(<div>
   <App/>
-</div>  , root );
+  <RenderByType/>
+  <Context />
+  <Control/>
+  <HighOrderComponent />
+</div>, root);
