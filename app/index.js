@@ -1,20 +1,18 @@
 'use strict';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Constant from './common/Constant'
-import App from './components/App';
-import RenderByType from './components/RenderByType';
-import Context from './components/Context';
-import Control from './components/Control';
-import {  HighOrderComponent } from './components/Hoc';
-import './index.less'
+import { Router, Route, hashHistory } from 'react-router';
 
-let root = document.getElementById('app');
+import { map } from './common/utils'
+import router from './common/router'
 
-ReactDOM.render(<div>
-  <App/>
-  <RenderByType/>
-  <Context />
-  <Control/>
-  <HighOrderComponent />
-</div>, root);
+
+const createRoutes = routers => map(routers, (component, path, index) => {
+  return <Route path={path} component={component} key={index}/>
+});
+
+const createRouter = history => <Router history={history}>
+  {createRoutes(router)}
+</Router>;
+
+ReactDOM.render(createRouter(hashHistory), document.getElementById('app'));
