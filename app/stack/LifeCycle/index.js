@@ -89,7 +89,6 @@ class LifeCycle extends Component {
 const createLifeCycle = ()=> {
   return <LifeCycle title={<div>title</div>}/>
 };
-
 export default createLifeCycle
 
 
