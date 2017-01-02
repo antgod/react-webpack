@@ -28,6 +28,13 @@ module.exports = {
     module: {
       loaders: [
         {
+          test: /\.tpl/,
+          loader: 'element-loader',
+          query: {
+            banner: `import { createElement, Component } from 'rax';`
+          }
+        },
+        {
           test: /\.js$/,
           loaders: ['react-hot', 'babel'],
           exclude: path.resolve(__dirname, 'node_modules')

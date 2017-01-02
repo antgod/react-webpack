@@ -1,4 +1,5 @@
 'use strict';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
@@ -16,3 +17,6 @@ const createRouter = history => <Router history={history}>
 </Router>;
 
 ReactDOM.render(createRouter(hashHistory), document.getElementById('app'));
+
+// 开启.babelrc中的rax与这个注释看一下
+//import './rax'

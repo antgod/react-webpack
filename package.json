@@ -30,9 +30,12 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "babel-preset-rax": "^0.0.9",
     "bootstrap": "^3.3.6",
     "classnames": "^2.2.5",
     "core-decorators": "^0.15.0",
+    "element-loader": "^0.0.9",
+    "rax": "^0.0.9",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-json-editor": "^0.2.0"
