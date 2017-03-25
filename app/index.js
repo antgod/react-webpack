@@ -1,22 +1,29 @@
-'use strict';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import Routers from '@app/routers'
+import { map } from '@common/utils'
+import Home from '@page/home'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router';
+const createLinks = routers => map(routers, ({ path }, name, index) =>
+  <li key={index}><Link to={path}>{name}</Link></li>
+)
 
-import { map } from './common/utils'
-import router from './common/router'
+const createRoutes = routers => map(routers, ({ component, path }, name, index) =>
+  <Route path={path} component={component} key={index} />
+)
 
+const produceRouter = () =>
+  <Router>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        {createLinks(Routers)}
+      </ul>
+      <hr />
+      <Route exact path="/" component={Home} />
+      {createRoutes(Routers)}
+    </div>
+  </Router>
 
-const createRoutes = routers => map(routers, (component, path, index) => {
-  return <Route path={path} component={component} key={index}/>
-});
-
-const createRouter = history => <Router history={history}>
-  {createRoutes(router)}
-</Router>;
-
-ReactDOM.render(createRouter(hashHistory), document.getElementById('app'));
-
-// 开启.babelrc中的rax与这个注释看一下
-//import './rax'
+ReactDOM.render(produceRouter(), document.getElementById('app'))

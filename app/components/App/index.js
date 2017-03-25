@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react'
+import './index.less'
 
-import 'bootstrap/dist/css/bootstrap.css';
-import './index.less';
+const App = () =>
+  (
+    <div>
+      <div>首页，展示一张图片</div>
+      <div className="img" />
+    </div>
+  )
 
-class App extends Component {
-  render(){
-    return (
-      <div className="app wrapper">
-        <div className="img"></div>
-        <div className="tip"></div>
-        <spfan className="glyphicon glyphicon-asterisk icon-pos"></spfan>
-      </div>
-    );
-  }
-}
-
-export default App;
+export default App

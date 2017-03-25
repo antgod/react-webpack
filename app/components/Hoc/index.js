@@ -1,32 +1,31 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-
-
-class BaseComponent extends React.Component {
-
+class BaseComponent extends Component {
   render() {
-    return <div className="wrapper" {...this.props}>
+    return (<div className="wrapper" {...this.props}>
       HighOrderComponent
-    </div>
+    </div>)
   }
 }
 
-const ComponentWrapper = Component =>
+const wrapper = Comp =>
   class WrappedComponent extends React.Component {
-
-    onClick(e){
-      alert(e)
+    onClick(e) {
+      console.log(e.target.innerHTML)
     }
 
     render() {
       const { onClick } = this
       const props = {
-        ...this.props,
-        onClick
+        onClick,
       }
-      return <Component {...props}></Component>
+      return (<div>
+        包装组件传入点击事件
+        <hr />
+        <Comp {...props} />
+      </div>)
     }
   }
 
-export const HighOrderComponent = ComponentWrapper (BaseComponent)
+export default wrapper(BaseComponent)
 
