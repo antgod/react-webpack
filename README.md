@@ -23,8 +23,8 @@
 
 ### 更多功能
     本项目目标快速搭建react项目，其他功能请参考。
-1. 快速搭建demo: create-react-app
-2. 学习react技术栈请参考：react-stack
-3. react相关技术: react-env
+1. 快速搭建demo: https://github.com/antgod/create-react-app
+2. 学习react技术栈请参考：https://github.com/antgod/react-stack
+3. react相关技术: https://github.com/antgod/react-env
 
 
