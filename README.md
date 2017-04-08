@@ -8,7 +8,6 @@
 
 1. npm i
 2. npm start
-3. 浏览器输入localhost:8000
 
 ### 内容
 
@@ -29,8 +28,15 @@
 
 ### 更多功能
     本项目目标快速搭建react项目，其他功能请参考。
-1. 快速搭建demo: https://github.com/antgod/create-react-app
-2. 学习react技术栈请参考：https://github.com/antgod/react-stack
-3. react相关技术: https://github.com/antgod/react-env
+
+1. [快速搭建demo][1]
+2. [学习react技术栈][2]
+3. [react相关技术][3]
+4. [我的博客][4]
+
+  [1]: https://github.com/antgod/create-react-app
+  [2]: https://github.com/antgod/react-stack
+  [3]: https://github.com/antgod/react-env
+  [4]: https://github.com/antgod/blog
 
 
